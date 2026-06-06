@@ -8,7 +8,7 @@
     padding: 14px 20px;
   }
 
-  .navbar {
+  .navbar {\\
     gap: 24px;
   }
 
@@ -64,31 +64,52 @@
 
 /* Mobile Large - 768px va undan kichik */
 @media (max-width: 768px) {
+
   .container {
     width: min(100%, 90%);
   }
 
   .mobile-menu-btn {
     display: flex !important;
+    position: relative;
+    z-index: 10000;
   }
 
   .navbar {
     display: none;
     position: fixed;
     top: 80px;
-    width: 90%;
+    right: 20px;
+    width: calc(100% - 40px);
+
     flex-direction: column;
+    align-items: flex-start;
+
     background: rgba(11, 18, 32, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
+
     padding: 20px;
-    backdrop-filter: blur(20px);
-    z-index: 999;
     gap: 12px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    z-index: 9999;
+
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.35),
+      0 0 30px rgba(124, 58, 237, 0.15);
   }
 
   .navbar.mobile-active {
     display: flex;
+  }
+
+  .navbar .nav-link {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 15px;
   }
 
   .hero-title {
@@ -115,6 +136,7 @@
   .social-cards-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Mobile Small - 480px va undan kichik */
