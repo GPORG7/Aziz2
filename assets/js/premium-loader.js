@@ -1,9 +1,8 @@
-// Premium 3D Loader with WebGL-style effects
+// Premium AI Energy Core Loader - No text, no percentage
 
 const loaderElement = document.getElementById('loader');
 let loadProgress = 0;
-const targetProgress = 100;
-const animationDuration = 1500; // 1.5 seconds
+const animationDuration = 1800;
 const startTime = Date.now();
 
 function animateLoader() {
@@ -13,27 +12,26 @@ function animateLoader() {
   if (progress < 100) {
     requestAnimationFrame(animateLoader);
   } else {
-    // Fade out and hide loader
-    loaderElement.style.opacity = '0';
-    loaderElement.style.pointerEvents = 'none';
-    setTimeout(() => {
-      loaderElement.style.display = 'none';
-    }, 500);
+    fadeOutLoader();
   }
+}
+
+function fadeOutLoader() {
+  loaderElement.style.opacity = '0';
+  loaderElement.style.pointerEvents = 'none';
+  setTimeout(() => {
+    loaderElement.style.display = 'none';
+  }, 500);
 }
 
 // Start animation
 if (loaderElement) {
   animateLoader();
   
-  // Ensure loader hides after 2 seconds regardless
+  // Ensure loader hides after 2.5 seconds
   setTimeout(() => {
-    if (loaderElement) {
-      loaderElement.style.opacity = '0';
-      loaderElement.style.pointerEvents = 'none';
-      setTimeout(() => {
-        loaderElement.style.display = 'none';
-      }, 500);
+    if (loaderElement && loaderElement.style.opacity !== '0') {
+      fadeOutLoader();
     }
-  }, 2000);
+  }, 2500);
 }
