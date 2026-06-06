@@ -2,31 +2,28 @@
    RESPONSIVE DESIGN
 ==================================== */
 
-/* Tablets */
+/* Tablet - 1024px va undan kichik */
 @media (max-width: 1024px) {
-  .container {
-    width: min(90vw, 100%);
+  .header .container {
+    padding: 14px 20px;
   }
 
-  section {
-    padding: 80px 0;
-  }
-
-  .section-title {
-    font-size: 40px;
-  }
-
-  .hero-title {
-    font-size: 44px;
+  .navbar {
+    gap: 24px;
   }
 
   .hero-content {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
+  .hero-title {
+    font-size: 42px;
+  }
+
   .avatar-container {
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
   }
 
   .avatar {
@@ -34,412 +31,125 @@
     height: 220px;
   }
 
-  .ring-1 { width: 260px; height: 260px; }
-  .ring-2 { width: 290px; height: 290px; }
-  .ring-3 { width: 320px; height: 320px; }
+  .section-title {
+    font-size: 40px;
+  }
 
-  .about-grid,
-  .hero-content {
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
 
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin-bottom: 60px;
-    padding-left: 80px;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-content,
-  .timeline-item:nth-child(even) .timeline-content {
-    grid-column: 1;
-  }
-
-  .timeline-marker {
-    left: 0;
-    top: 0;
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
   }
 
-  .floating-dock {
-    right: 20px;
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .logo-subtitle {
-    display: none;
-  }
-
-  .navbar {
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 
-  .nav-link {
-    font-size: 13px;
+  .social-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Large - 768px va undan kichik */
+@media (max-width: 768px) {
+  .container {
+    width: min(100%, 90%);
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 80px;
+    width: 90%;
+    flex-direction: column;
+    background: rgba(11, 18, 32, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    gap: 12px;
+  }
+
+  .navbar.mobile-active {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 32px;
   }
 
   .hero-cta {
     flex-direction: column;
   }
 
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: flex;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: column;
-    width: min(90vw, 400px);
-    background: rgba(11, 18, 32, 0.95);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    backdrop-filter: blur(20px);
-    padding: 20px;
-    gap: 12px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 999;
-  }
-
-  .navbar.mobile-active {
-    max-height: 400px;
-  }
-
-  .header {
-    top: 10px;
-    width: 90%;
-  }
-
-  .header .container {
-    padding: 12px 20px;
-  }
-
-  .logo-text-group {
-    display: none;
-  }
-
-  .logo-avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .language-switcher {
-    top: 10px;
-    right: 20px;
-    gap: 4px;
-  }
-
-  .lang-btn {
-    padding: 6px 10px;
-    font-size: 10px;
-  }
-
-  section {
-    padding: 60px 0;
-  }
-
-  .section-header {
-    margin-bottom: 50px;
-  }
-
-  .section-title {
-    font-size: 32px;
-  }
-
-  .section-subtitle {
-    font-size: 14px;
-  }
-
-  .hero {
-    padding-top: 100px;
-    min-height: auto;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-  }
-
-  .hero-stats {
-    gap: 20px;
-  }
-
-  .stat h3 {
-    font-size: 24px;
-  }
-
-  .stat p {
-    font-size: 12px;
-  }
-
-  .avatar-container {
-    width: 240px;
-    height: 240px;
-    margin-bottom: 40px;
-  }
-
-  .avatar {
-    width: 160px;
-    height: 160px;
-  }
-
-  .ring-1 { width: 200px; height: 200px; }
-  .ring-2 { width: 220px; height: 220px; }
-  .ring-3 { width: 240px; height: 240px; }
-
-  .floating-badge {
-    font-size: 10px;
-    padding: 6px 10px;
-  }
-
-  .large-card {
-    padding: 24px;
-  }
-
-  .card-title {
-    font-size: 22px;
-  }
-
-  .card-text {
-    font-size: 14px;
-  }
-
-  .info-card {
-    padding: 18px;
-  }
-
-  .timeline {
-    max-width: 100%;
-  }
-
-  .timeline::before {
-    left: 15px;
-  }
-
-  .timeline-item {
-    padding-left: 60px;
-    margin-bottom: 40px;
-  }
-
-  .timeline-marker {
-    width: 12px;
-    height: 12px;
-    left: 8px;
-  }
-
-  .timeline-content {
-    padding: 20px;
-  }
-
-  .timeline-title {
-    font-size: 18px;
-  }
-
-  .timeline-company {
-    font-size: 12px;
-  }
-
-  .timeline-desc {
-    font-size: 13px;
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .project-card {
-    padding: 20px;
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
-  .project-title {
-    font-size: 18px;
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
-  .project-desc {
-    font-size: 13px;
-  }
-
-  .skills-marquee {
-    padding: 20px 0;
-  }
-
-  .marquee-content {
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  .skill-item {
-    padding: 12px 16px;
-    font-size: 12px;
-  }
-
-  .skill-item i {
-    font-size: 20px;
-  }
-
-  .floating-dock {
-    right: 15px;
-    bottom: auto;
-    top: 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: auto;
-    transform: translateY(-50%);
-  }
-
-  .dock-item {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
-  }
-
-  .dock-item::after {
-    display: none;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 24px;
-    text-align: center;
-  }
-
-  .footer-links {
-    justify-content: center;
+  .social-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Small mobile */
+/* Mobile Small - 480px va undan kichik */
 @media (max-width: 480px) {
-  .container {
-    width: 100%;
-    padding: 0 16px;
-  }
-
-  section {
-    padding: 40px 0;
+  .hero-title {
+    font-size: 26px;
   }
 
   .section-title {
     font-size: 26px;
   }
 
-  .hero {
-    padding-top: 80px;
-  }
-
-  .hero-title {
-    font-size: 28px;
-  }
-
-  .hero-badge {
-    font-size: 11px;
-  }
-
-  .hero-cta {
-    flex-direction: column;
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
-  .btn {
-    padding: 12px 20px;
-    font-size: 13px;
-  }
-
-  .hero-stats {
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .stat {
-    flex: 0 1 calc(50% - 8px);
-  }
-
   .avatar-container {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
   }
 
   .avatar {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Extra Small - 360px va undan kichik */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 22px;
   }
 
-  .ring-1 { width: 170px; height: 170px; }
-  .ring-2 { width: 185px; height: 185px; }
-  .ring-3 { width: 200px; height: 200px; }
-
-  .about-right {
-    gap: 16px;
-  }
-
-  .info-card {
-    padding: 16px;
-  }
-
-  .project-card {
-    padding: 16px;
-  }
-
-  .project-title {
-    font-size: 16px;
-  }
-
-  .project-tech {
-    margin-bottom: 16px;
-  }
-
-  .tech-tag {
-    font-size: 10px;
-    padding: 4px 8px;
-  }
-
-  .project-footer {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .project-link {
-    padding: 8px 10px;
-    font-size: 11px;
-  }
-
-  .hero-right {
-    display: none;
-  }
-
-  .floating-dock {
-    display: none;
-  }
-
-  .footer-text p {
-    font-size: 12px;
-  }
-
-  .footer-links {
-    gap: 16px;
+  .section-title {
+    font-size: 22px;
   }
 }

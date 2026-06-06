@@ -1,125 +1,62 @@
-// Interaktiv effektlar va hover animatsiyalari
+// Interactions va hover effects
 
-class Interactions {
-  constructor() {
-    this.setupCardInteractions();
-    this.setupButtonInteractions();
-    this.setupParallaxEffect();
-  }
-
-  setupCardInteractions() {
-    const cards = document.querySelectorAll(
-      '.project-card, .info-card, .timeline-content, .skill-item'
-    );
-
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.borderColor = 'var(--accent)';
-      });
-
-      card.addEventListener('mouseleave', function() {
-        this.style.borderColor = 'var(--border)';
-      });
-    });
-  }
-
-  setupButtonInteractions() {
-    const buttons = document.querySelectorAll('.btn');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('mouseenter', function() {
-        const icon = this.querySelector('.btn-icon');
-        if (icon) {
-          icon.style.transform = 'translateX(4px)';
-        }
-      });
-
-      btn.addEventListener('mouseleave', function() {
-        const icon = this.querySelector('.btn-icon');
-        if (icon) {
-          icon.style.transform = 'translateX(0)';
-        }
-      });
-    });
-  }
-
-  setupParallaxEffect() {
-    const avatarContainer = document.querySelector('.avatar-container');
-    if (!avatarContainer) return;
-
-    document.addEventListener('mousemove', (e) => {
-      const x = (window.innerWidth / 2 - e.clientX) / 50;
-      const y = (window.innerHeight / 2 - e.clientY) / 50;
-
-      avatarContainer.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  }
+const avatar = document.querySelector('.avatar-container');
+if (avatar) {
+  document.addEventListener('mousemove', (e) => {
+    const rect = avatar.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const angleX = (e.clientY - centerY) / 30;
+    const angleY = (e.clientX - centerX) / 30;
+    
+    avatar.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+  });
+  
+  document.addEventListener('mouseleave', () => {
+    avatar.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  });
 }
 
-new Interactions();
-
-// Smooth scroll anchor links
-class SmoothScroll {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href === '#') return;
-
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  }
+// Counter animation
+function animateCounter(element, target, duration = 2000) {
+  let current = 0;
+  const increment = target / (duration / 16);
+  
+  const counter = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(counter);
+    }
+    element.textContent = Math.floor(current);
+  }, 16);
 }
 
-new SmoothScroll();
-
-// Counter animatsiyalari
-class Counter {
-  constructor() {
-    this.setupCounters();
-  }
-
-  setupCounters() {
-    const counters = document.querySelectorAll('.stat h3');
-    const options = { threshold: 0.5 };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    counters.forEach(counter => observer.observe(counter));
-  }
-
-  animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''));
-    const hasPlus = element.textContent.includes('+');
-    let current = 0;
-    const step = Math.ceil(target / 40);
-
-    const interval = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(interval);
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const text = entry.target.textContent;
+      const hasPlus = text.includes('+');
+      const hasDivide = text.includes('/');
+      
+      let number;
+      if (hasPlus) {
+        number = parseInt(text.replace('+', ''));
+      } else if (hasDivide) {
+        return;
+      } else {
+        number = parseInt(text);
       }
+      
+      if (number) {
+        animateCounter(entry.target, number);
+        counterObserver.unobserve(entry.target);
+      }
+    }
+  });
+}, { threshold: 0.5 });
 
-      element.textContent = current + (hasPlus ? '+' : '');
-    }, 30);
-  }
-}
-
-new Counter();
+document.querySelectorAll('.stat h3, .achievement-card h3').forEach(el => {
+  counterObserver.observe(el);
+});

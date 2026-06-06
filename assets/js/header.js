@@ -1,45 +1,47 @@
-// Header scroll effekti va mobile menu
+// Header scroll effect va mobile menu
 
-class Header {
-  constructor() {
-    this.header = document.querySelector('.header');
-    this.mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    this.navbar = document.querySelector('.navbar');
-    this.navLinks = document.querySelectorAll('.nav-link');
-    
-    this.init();
+const header = document.querySelector('.header');
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navbar = document.querySelector('.navbar');
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header?.classList.add('scrolled');
+  } else {
+    header?.classList.remove('scrolled');
   }
+});
 
-  init() {
-    // Scroll effekti
-    window.addEventListener('scroll', () => this.handleScroll());
-    
-    // Mobile menu
-    if (this.mobileMenuBtn) {
-      this.mobileMenuBtn.addEventListener('click', () => this.toggleMobileMenu());
-    }
-    
-    // Nav linklar
-    this.navLinks.forEach(link => {
-      link.addEventListener('click', () => this.closeMobileMenu());
-    });
-  }
-
-  handleScroll() {
-    if (window.scrollY > 50) {
-      this.header.classList.add('scrolled');
+// Mobile menu toggle
+mobileMenuBtn?.addEventListener('click', () => {
+  navbar?.classList.toggle('mobile-active');
+  
+  const spans = mobileMenuBtn.querySelectorAll('span');
+  spans.forEach((span, index) => {
+    if (navbar.classList.contains('mobile-active')) {
+      if (index === 0) {
+        span.style.transform = 'rotate(45deg) translateY(10px)';
+      } else if (index === 1) {
+        span.style.opacity = '0';
+      } else {
+        span.style.transform = 'rotate(-45deg) translateY(-10px)';
+      }
     } else {
-      this.header.classList.remove('scrolled');
+      span.style.transform = 'none';
+      span.style.opacity = '1';
     }
-  }
+  });
+});
 
-  toggleMobileMenu() {
-    this.navbar.classList.toggle('mobile-active');
-  }
-
-  closeMobileMenu() {
-    this.navbar.classList.remove('mobile-active');
-  }
-}
-
-new Header();
+// Close mobile menu when link clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navbar?.classList.remove('mobile-active');
+    const spans = mobileMenuBtn?.querySelectorAll('span');
+    spans?.forEach(span => {
+      span.style.transform = 'none';
+      span.style.opacity = '1';
+    });
+  });
+});
