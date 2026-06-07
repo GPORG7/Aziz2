@@ -53,8 +53,7 @@
 
 /* Section animations */
 section {
-  animation: slideUp 0.8s ease-out forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 section.active {
