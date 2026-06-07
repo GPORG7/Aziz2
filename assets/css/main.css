@@ -39,193 +39,177 @@ body {
 }
 
 /* ====================================
-   PREMIUM 3D LOADER
+   PREMIUM LOADER V2
 ==================================== */
 
-.premium-loader {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(135deg, #050816 0%, #0B1220 100%);
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  overflow: hidden;
+.loader-content{
+    position:relative;
+    z-index:10;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
 }
 
-.loader-background {
-  position: absolute;
-  inset: 0;
-  opacity: 0.3;
+.loader-avatar-wrapper{
+    position:relative;
+
+    width:340px;
+    height:340px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.circuit-board {
-  width: 100%;
-  height: 100%;
-  animation: rotateCircuit 20s linear infinite;
+.loader-avatar-wrapper::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124,58,237,.08) 0%,
+            rgba(6,182,212,.05) 45%,
+            transparent 75%
+        );
+
+    filter:blur(10px);
+
+    animation:
+        loaderAura 5s ease-in-out infinite;
 }
 
-@keyframes rotateCircuit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.loader-avatar{
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    position:relative;
+    z-index:10;
+
+    border:3px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 20px rgba(124,58,237,.15),
+        0 0 40px rgba(6,182,212,.08);
+
+    animation:
+        loaderFloat 4s ease-in-out infinite;
 }
 
-.loader-content {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  text-align: center;
+.avatar-ring-1{
+    position:absolute;
+
+    width:290px;
+    height:290px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(124,58,237,.20);
+
+    animation:
+        rotateRing 10s linear infinite;
 }
 
-/* Premium 3D Glass Orb */
-.loader-avatar-wrapper {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px;
+.avatar-ring-2{
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(6,182,212,.15);
+
+    animation:
+        rotateRingReverse 16s linear infinite;
 }
 
-.loader-avatar-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.3));
-  border-radius: 50%;
-  z-index: 8;
-  box-shadow:
-    inset -2px -2px 5px rgba(0,0,0,0.5),
-    inset 2px 2px 5px rgba(255,255,255,0.2),
-    0 0 60px rgba(124, 58, 237, 0.4),
-    0 0 100px rgba(6, 182, 212, 0.2);
+.avatar-pulse{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.10) 0%,
+            rgba(6,182,212,.05) 45%,
+            transparent 70%
+        );
+
+    filter:blur(8px);
+
+    animation:
+        pulseAura 4s ease-in-out infinite;
 }
 
-.avatar-pulse {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, rgba(6, 182, 212, 0.2) 40%, transparent 70%);
-  animation: neon-pulse 2s ease-in-out infinite;
-  filter: blur(15px);
+@keyframes loaderFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
 }
 
-.loader-avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid rgba(6, 182, 212, 0.6);
-  object-fit: cover;
-  z-index: 5;
-  position: relative;
-  box-shadow:
-    0 0 40px rgba(124, 58, 237, 0.5),
-    0 0 80px rgba(6, 182, 212, 0.3),
-    inset 0 0 20px rgba(255,255,255,0.1);
-  animation: float-avatar 3s ease-in-out infinite;
+@keyframes rotateRing{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
 }
 
-@keyframes float-avatar {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-15px) scale(1.02); }
+@keyframes rotateRingReverse{
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
 }
 
-.avatar-ring-1 {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  border: 2px solid rgba(124, 58, 237, 0.4);
-  border-radius: 50%;
-  animation: rotate-ring-fast 3s linear infinite;
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+@keyframes pulseAura{
+    0%,100%{
+        transform:scale(1);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.08);
+        opacity:.9;
+    }
 }
 
-.avatar-ring-2 {
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  border: 1.5px solid rgba(6, 182, 212, 0.3);
-  border-radius: 50%;
-  animation: rotate-ring-slow 4s linear infinite reverse;
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
-}
+@keyframes loaderAura{
+    0%,100%{
+        transform:scale(1);
+        opacity:.5;
+    }
 
-@keyframes rotate-ring-fast {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    50%{
+        transform:scale(1.1);
+        opacity:.9;
+    }
 }
-
-@keyframes rotate-ring-slow {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
-
-@keyframes neon-pulse {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.15);
-  }
-}
-
-.loader-title {
-  font-size: 48px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  background: linear-gradient(135deg, #7C3AED, #06B6D4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: fadeInScale 1s ease-out 0.5s forwards;
-  opacity: 0;
-  display: none;
-}
-
-.loader-subtitle {
-  font-size: 14px;
-  color: var(--text-muted);
-  letter-spacing: 2px;
-  animation: fadeInScale 1s ease-out 0.7s forwards;
-  opacity: 0;
-  display: none;
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.loader-status {
-  display: none;
-}
-
-.progress-wrapper {
-  display: none;
-}
-
-.loader-quote {
-  display: none;
-}
-
-.loader-tagline {
-  display: none;
-}
-
 /* ====================================
    AURORA BACKGROUND
 ==================================== */
