@@ -19,39 +19,36 @@ if (avatar) {
 }
 
 // Counter animation
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, suffix, duration = 2000) {
   let current = 0;
   const increment = target / (duration / 16);
-  
+
   const counter = setInterval(() => {
     current += increment;
     if (current >= target) {
       current = target;
       clearInterval(counter);
     }
-    element.textContent = Math.floor(current);
+
+    if (suffix) {
+      element.innerHTML = Math.floor(current) + suffix;
+    } else {
+      element.textContent = Math.floor(current);
+    }
   }, 16);
 }
 
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const text = entry.target.textContent;
-      const hasPlus = text.includes('+');
-      const hasDivide = text.includes('/');
-      
-      let number;
-      if (hasPlus) {
-        number = parseInt(text.replace('+', ''));
-      } else if (hasDivide) {
-        return;
-      } else {
-        number = parseInt(text);
-      }
-      
-      if (number) {
-        animateCounter(entry.target, number);
-        counterObserver.unobserve(entry.target);
+      const element = entry.target;
+      const suffixElement = element.querySelector('span');
+      const suffix = suffixElement ? suffixElement.outerHTML : '';
+      const number = parseInt(element.textContent.replace(/\D/g, ''), 10);
+
+      if (number && !element.textContent.includes('/')) {
+        animateCounter(element, number, suffix);
+        counterObserver.unobserve(element);
       }
     }
   });

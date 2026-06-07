@@ -1,14 +1,29 @@
-// Premium AI Energy Core Loader - No text, no percentage
+// Premium loader with progress animation
 
 const loaderElement = document.getElementById('loader');
-let loadProgress = 0;
+const progressFill = document.querySelector('.progress-fill');
+const progressText = document.querySelector('.progress-text');
 const animationDuration = 1800;
 const startTime = Date.now();
+
+function updateProgress(progress) {
+  const percent = Math.floor(progress);
+
+  if (progressFill) {
+    progressFill.style.width = percent + '%';
+  }
+
+  if (progressText) {
+    progressText.textContent = percent + '%';
+  }
+}
 
 function animateLoader() {
   const elapsed = Date.now() - startTime;
   const progress = Math.min((elapsed / animationDuration) * 100, 100);
-  
+
+  updateProgress(progress);
+
   if (progress < 100) {
     requestAnimationFrame(animateLoader);
   } else {
