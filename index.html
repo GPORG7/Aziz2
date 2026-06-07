@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/premium-background.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 
@@ -102,12 +103,17 @@
   </div>
 
   <!-- ====================================
-       AURORA BACKGROUND
+       PREMIUM BACKGROUND ECOSYSTEM
   ==================================== -->
-  <div class="aurora-container">
-    <div class="aurora aurora-1"></div>
-    <div class="aurora aurora-2"></div>
-    <div class="aurora aurora-3"></div>
+  <div class="premium-bg" aria-hidden="true">
+    <div class="premium-grid"></div>
+    <canvas id="premium-bg-canvas"></canvas>
+    <div class="aurora-container">
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="aurora aurora-3"></div>
+    </div>
+    <div class="mouse-glow" id="mouse-glow"></div>
   </div>
 
   <!-- ====================================
@@ -201,6 +207,17 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
         </div>
         <div class="hero-right">
           <div class="avatar-container">
+            <div class="avatar-radial-glow" aria-hidden="true"></div>
+            <div class="ring-energy-field" aria-hidden="true">
+              <span class="energy-dot energy-dot-1"></span>
+              <span class="energy-dot energy-dot-2"></span>
+              <span class="energy-dot energy-dot-3"></span>
+              <span class="energy-dot energy-dot-4"></span>
+              <span class="energy-dot energy-dot-5"></span>
+              <span class="energy-dot energy-dot-6"></span>
+              <span class="energy-dot energy-dot-7"></span>
+              <span class="energy-dot energy-dot-8"></span>
+            </div>
             <div class="ring ring-1"></div>
             <div class="ring ring-2"></div>
             <div class="ring ring-3"></div>
@@ -846,6 +863,7 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   </footer>
 
   <!-- Scripts -->
+  <script src="assets/js/premium-background.js"></script>
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/premium-loader.js"></script>
   <script src="assets/js/header.js"></script>
