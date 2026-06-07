@@ -61,29 +61,29 @@
 
       <!-- Center text -->
       <h1 class="loader-title">AZIZ ASADOV</h1>
-      <p class="loader-subtitle">Initializing Digital Ecosystem...</p>
+      <p class="loader-subtitle" data-i18n="loader.subtitle">Initializing Digital Ecosystem...</p>
 
       <!-- Status items -->
       <div class="loader-status">
         <div class="status-item">
           <i class="fas fa-brain"></i>
-          <span>AI SYSTEMS</span>
+          <span data-i18n="loader.s1">AI SYSTEMS</span>
         </div>
         <div class="status-item">
           <i class="fas fa-database"></i>
-          <span>DATABASE</span>
+          <span data-i18n="loader.s2">DATABASE</span>
         </div>
         <div class="status-item">
           <i class="fas fa-cloud"></i>
-          <span>API SERVICES</span>
+          <span data-i18n="loader.s3">API SERVICES</span>
         </div>
         <div class="status-item">
           <i class="fas fa-cog"></i>
-          <span>AUTOMATION</span>
+          <span data-i18n="loader.s4">AUTOMATION</span>
         </div>
         <div class="status-item">
           <i class="fas fa-play-circle"></i>
-          <span>MEDIA ENGINE</span>
+          <span data-i18n="loader.s5">MEDIA ENGINE</span>
         </div>
       </div>
 
@@ -96,8 +96,8 @@
       </div>
 
       <!-- Quote -->
-      <p class="loader-quote">Kod. G'oya. Intellekt. Natija.</p>
-      <p class="loader-tagline">AI BILAN CHEKSIZ IMKONIYATLAR</p>
+      <p class="loader-quote" data-i18n="loader.quote">Kod. G'oya. Intellekt. Natija.</p>
+      <p class="loader-tagline" data-i18n="loader.tagline">AI BILAN CHEKSIZ IMKONIYATLAR</p>
     </div>
   </div>
 
@@ -117,7 +117,7 @@
     <a href="tel:+998505033441" class="dock-item" data-tooltip="+998 50 503 34 41">
       <i class="fas fa-phone"></i>
     </a>
-    <a href="https://t.me/Azizjon_Asadov" target="_blank" class="dock-item" data-tooltip="@Azizjon_Asadov">
+    <a href="https://t.me/AzizjonAsadov_bot" target="_blank" rel="noopener noreferrer" class="dock-item" data-tooltip="Murojaat boti" data-i18n-tooltip="dock.bot">
       <i class="fab fa-telegram"></i>
     </a>
     <a href="https://instagram.com/azizasadov_official" target="_blank" class="dock-item" data-tooltip="@azizasadov_official">
@@ -138,19 +138,30 @@
 
       <div class="logo-text-group">
         <h4 class="logo-name">Aziz Asadov</h4>
-        <span class="logo-subtitle">AI Builder • Digital Creator</span>
+        <span class="logo-subtitle" data-i18n="logo.subtitle">AI Builder • Digital Creator</span>
       </div>
     </div>
 
     <nav class="navbar" id="navbar">
-      <a href="#home" class="nav-link">Bosh sahifa</a>
-      <a href="#about" class="nav-link">Men haqimda</a>
-      <a href="#experience" class="nav-link">Tajriba</a>
-      <a href="#projects" class="nav-link">Loyihalar</a>
-      <a href="#skills" class="nav-link">Ko'nikmalar</a>
-      <a href="#services" class="nav-link">Xizmatlar</a>
-      <a href="#contact" class="nav-link">Aloqa</a>
+      <a href="#home" class="nav-link" data-i18n="nav.home">Bosh sahifa</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">Men haqimda</a>
+      <a href="#experience" class="nav-link" data-i18n="nav.experience">Tajriba</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">Loyihalar</a>
+      <a href="#skills" class="nav-link" data-i18n="nav.skills">Ko'nikmalar</a>
+      <a href="#services" class="nav-link" data-i18n="nav.services">Xizmatlar</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">Aloqa</a>
+      <div class="lang-switcher lang-switcher-mobile">
+        <button type="button" class="lang-btn" data-lang="uz">O'Z</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+      </div>
     </nav>
+
+    <div class="lang-switcher lang-switcher-desktop">
+      <button type="button" class="lang-btn" data-lang="uz">O'Z</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="ru">RU</button>
+    </div>
 
     <button class="mobile-menu-btn">
       <span></span>
@@ -168,24 +179,24 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-left">
-          <div class="hero-badge">AI Builder • Digital Creator • Team Leader</div>
+          <div class="hero-badge" data-i18n="hero.badge">AI Builder • Digital Creator • Team Leader</div>
           <h1 class="hero-title">Aziz Asadov</h1>
-          <p class="hero-description">Sun'iy intellekt asosida real biznes yechimlari, avtomatlashtirish tizimlari va premium kontent ekotizimlari yarataman.
+          <p class="hero-description" data-i18n="hero.desc" data-i18n-html>Sun'iy intellekt asosida real biznes yechimlari, avtomatlashtirish tizimlari va premium kontent ekotizimlari yarataman.
           
 Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatlashtirish tizimlari va raqamli platformalarga aylantiraman. Maqsadim — texnologiyalar yordamida bizneslar va insonlar uchun vaqt tejaydigan, samaradorlikni oshiradigan va real natija beradigan mahsulotlar yaratish.</p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">
-              Loyihalarni Ko'rish
+              <span data-i18n="hero.cta1">Loyihalarni Ko'rish</span>
               <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
             </a>
-            <a href="#contact" class="btn btn-secondary">Bog'lanish</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta2">Bog'lanish</a>
           </div>
           <div class="hero-stats">
-            <div class="stat"><h3>20<span>+</span></h3><p>AI Loyihalar</p></div>
-            <div class="stat"><h3>200<span>+</span></h3><p>Kontentlar</p></div>
-            <div class="stat"><h3>10<span>+</span></h3><p>Hamkorlar</p></div>
-            <div class="stat"><h3>30<span>+</span></h3><p>Web Saytlar</p></div>
-            <div class="stat"><h3>24<span>/7</span></h3><p>Innovatsiya</p></div>
+            <div class="stat"><h3>20<span>+</span></h3><p data-i18n="hero.stat1">AI Loyihalar</p></div>
+            <div class="stat"><h3>200<span>+</span></h3><p data-i18n="hero.stat2">Kontentlar</p></div>
+            <div class="stat"><h3>10<span>+</span></h3><p data-i18n="hero.stat3">Hamkorlar</p></div>
+            <div class="stat"><h3>30<span>+</span></h3><p data-i18n="hero.stat4">Web Saytlar</p></div>
+            <div class="stat"><h3>24<span>/7</span></h3><p data-i18n="hero.stat5">Innovatsiya</p></div>
           </div>
         </div>
         <div class="hero-right">
@@ -202,9 +213,9 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
               <div class="particle particle-3"></div>
             </div>
           </div>
-          <div class="floating-badge badge-1">AI Strategist</div>
-          <div class="floating-badge badge-2">Team Leader</div>
-          <div class="floating-badge badge-3">Founder</div>
+          <div class="floating-badge badge-1" data-i18n="hero.badge1">AI Strategist</div>
+          <div class="floating-badge badge-2" data-i18n="hero.badge2">Team Leader</div>
+          <div class="floating-badge badge-3" data-i18n="hero.badge3">Founder</div>
         </div>
       </div>
     </div>
@@ -216,38 +227,38 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="about" class="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">BIO</span>
-        <h2 class="section-title">Men haqimda</h2>
-        <p class="section-subtitle">Men Asadov Aziz Alisherovich. Sun'iy intellekt, avtomatlashtirish va raqamli mahsulotlar yaratish yo'nalishida faoliyat yuritaman.</p>
+        <span class="section-label" data-i18n="about.label">BIO</span>
+        <h2 class="section-title" data-i18n="about.title">Men haqimda</h2>
+        <p class="section-subtitle" data-i18n="about.subtitle">Men Asadov Aziz Alisherovich. Sun'iy intellekt, avtomatlashtirish va raqamli mahsulotlar yaratish yo'nalishida faoliyat yuritaman.</p>
       </div>
       <div class="about-grid">
         <div class="about-left">
           <div class="large-card">
-            <h3 class="card-title">G'oyadan Tayyor Mahsulotgacha</h3>
-            <p class="card-text">Hozirda Izdihom PR/Marketing Agency kompaniyasida AI Team Leader lavozimida ishlayman. Faoliyatim davomida turli bizneslar uchun AI yechimlari, Telegram botlar, avtomatlashtirish tizimlari va premium kontent ishlab chiqish loyihalarida qatnashganman.</p>
-            <p class="card-text">Maqsadim: Sun'iy intellekt yordamida real muammolarni hal qiladigan, bizneslarni tezlashtiradigan va inson vaqtini tejaydigan mahsulotlar yaratish.</p>
+            <h3 class="card-title" data-i18n="about.cardTitle">G'oyadan Tayyor Mahsulotgacha</h3>
+            <p class="card-text" data-i18n="about.card1">Hozirda Izdihom PR/Marketing Agency kompaniyasida AI Team Leader lavozimida ishlayman. Faoliyatim davomida turli bizneslar uchun AI yechimlari, Telegram botlar, avtomatlashtirish tizimlari va premium kontent ishlab chiqish loyihalarida qatnashganman.</p>
+            <p class="card-text" data-i18n="about.card2">Maqsadim: Sun'iy intellekt yordamida real muammolarni hal qiladigan, bizneslarni tezlashtiradigan va inson vaqtini tejaydigan mahsulotlar yaratish.</p>
           </div>
         </div>
         <div class="about-right">
           <div class="info-card">
-            <h4 class="info-title">Lavozim</h4>
-            <p class="info-value">AI Team Leader</p>
-            <span class="info-sub">Izdihom PR/Marketing Agency</span>
+            <h4 class="info-title" data-i18n="about.i1t">Lavozim</h4>
+            <p class="info-value" data-i18n="about.i1v">AI Team Leader</p>
+            <span class="info-sub" data-i18n="about.i1s">Izdihom PR/Marketing Agency</span>
           </div>
           <div class="info-card">
-            <h4 class="info-title">Yo'nalishlar</h4>
-            <p class="info-value">AI Tizimlari</p>
-            <span class="info-sub">Telegram Botlar • Automation</span>
+            <h4 class="info-title" data-i18n="about.i2t">Yo'nalishlar</h4>
+            <p class="info-value" data-i18n="about.i2v">AI Tizimlari</p>
+            <span class="info-sub" data-i18n="about.i2s">Telegram Botlar • Automation</span>
           </div>
           <div class="info-card">
-            <h4 class="info-title">Mutaxassislik</h4>
-            <p class="info-value">Prompt Engineering</p>
-            <span class="info-sub">AI Media Production</span>
+            <h4 class="info-title" data-i18n="about.i3t">Mutaxassislik</h4>
+            <p class="info-value" data-i18n="about.i3v">Prompt Engineering</p>
+            <span class="info-sub" data-i18n="about.i3s">AI Media Production</span>
           </div>
           <div class="info-card">
-            <h4 class="info-title">Faoliyat</h4>
-            <p class="info-value">Digital Ecosystem</p>
-            <span class="info-sub">Startup Development</span>
+            <h4 class="info-title" data-i18n="about.i4t">Faoliyat</h4>
+            <p class="info-value" data-i18n="about.i4v">Digital Ecosystem</p>
+            <span class="info-sub" data-i18n="about.i4s">Startup Development</span>
           </div>
         </div>
       </div>
@@ -262,23 +273,23 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
       <div class="achievement-grid">
         <div class="achievement-card">
           <h3>20<span>+</span></h3>
-          <p>AI Loyihalar</p>
+          <p data-i18n="ach.a1">AI Loyihalar</p>
         </div>
         <div class="achievement-card">
           <h3>200<span>+</span></h3>
-          <p>Yaratilgan Kontentlar</p>
+          <p data-i18n="ach.a2">Yaratilgan Kontentlar</p>
         </div>
         <div class="achievement-card">
           <h3>10<span>+</span></h3>
-          <p>Hamkorlar</p>
+          <p data-i18n="ach.a3">Hamkorlar</p>
         </div>
         <div class="achievement-card">
           <h3>30<span>+</span></h3>
-          <p>web saytlar va botlar</p>
+          <p data-i18n="ach.a4">web saytlar va botlar</p>
         </div>
         <div class="achievement-card">
           <h3>24<span>/7</span></h3>
-          <p>Innovatsiya</p>
+          <p data-i18n="ach.a5">Innovatsiya</p>
         </div>
       </div>
     </div>
@@ -290,50 +301,50 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="experience" class="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">TAJRIBA</span>
-        <h2 class="section-title">Amaliy Faoliyat</h2>
-        <p class="section-subtitle">Real loyihalar va amaliy tajribalar.</p>
+        <span class="section-label" data-i18n="exp.label">TAJRIBA</span>
+        <h2 class="section-title" data-i18n="exp.title">Amaliy Faoliyat</h2>
+        <p class="section-subtitle" data-i18n="exp.subtitle">Real loyihalar va amaliy tajribalar.</p>
       </div>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-label">2025 - Hozir</span>
-            <h3 class="timeline-title">AI Team Leader</h3>
-            <p class="timeline-company">Izdihom PR/Marketing Agency</p>
-            <p class="timeline-desc">AI bo'limini boshqarish, AI strategiyalar yaratish, Avtomatlashtirish tizimlarini joriy etish</p>
+            <span class="timeline-label" data-i18n="exp.e1l">2025 - Hozir</span>
+            <h3 class="timeline-title" data-i18n="exp.e1t">AI Team Leader</h3>
+            <p class="timeline-company" data-i18n="exp.e1c">Izdihom PR/Marketing Agency</p>
+            <p class="timeline-desc" data-i18n="exp.e1d">AI bo'limini boshqarish, AI strategiyalar yaratish, Avtomatlashtirish tizimlarini joriy etish</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-label">AI Media Production</span>
-            <h3 class="timeline-title">Kontent Ekotizimi</h3>
-            <p class="timeline-desc">Brendlar uchun video roliklar, reklama materiallari, posterlar, AI kontentlar yaratish</p>
+            <span class="timeline-label" data-i18n="exp.e2l">AI Media Production</span>
+            <h3 class="timeline-title" data-i18n="exp.e2t">Kontent Ekotizimi</h3>
+            <p class="timeline-desc" data-i18n="exp.e2d">Brendlar uchun video roliklar, reklama materiallari, posterlar, AI kontentlar yaratish</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-label">Automation Systems</span>
-            <h3 class="timeline-title">Biznes Avtomatlashtirish</h3>
-            <p class="timeline-desc">CRM integratsiyalari, AI yordamchilar, Workflow tizimlari, Murojaat tizimlari</p>
+            <span class="timeline-label" data-i18n="exp.e3l">Automation Systems</span>
+            <h3 class="timeline-title" data-i18n="exp.e3t">Biznes Avtomatlashtirish</h3>
+            <p class="timeline-desc" data-i18n="exp.e3d">CRM integratsiyalari, AI yordamchilar, Workflow tizimlari, Murojaat tizimlari</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-label">Telegram Ecosystem</span>
-            <h3 class="timeline-title">Telegram Botlar</h3>
-            <p class="timeline-desc">Telegram botlar, AI yordamchilar, Avto javob tizimlari, Murojaat tizimlari</p>
+            <span class="timeline-label" data-i18n="exp.e4l">Telegram Ecosystem</span>
+            <h3 class="timeline-title" data-i18n="exp.e4t">Telegram Botlar</h3>
+            <p class="timeline-desc" data-i18n="exp.e4d">Telegram botlar, AI yordamchilar, Avto javob tizimlari, Murojaat tizimlari</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-label">Startup Development</span>
-            <h3 class="timeline-title">AI Mahsulotlar</h3>
-            <p class="timeline-desc">SaaS platformalar, Raqamli ekotizimlar, MVP development, Startup loyihalar</p>
+            <span class="timeline-label" data-i18n="exp.e5l">Startup Development</span>
+            <h3 class="timeline-title" data-i18n="exp.e5t">AI Mahsulotlar</h3>
+            <p class="timeline-desc" data-i18n="exp.e5d">SaaS platformalar, Raqamli ekotizimlar, MVP development, Startup loyihalar</p>
           </div>
         </div>
       </div>
@@ -346,217 +357,236 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="projects" class="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">PORTFOLIO</span>
-        <h2 class="section-title">Mening Loyihalarim</h2>
-        <p class="section-subtitle">Real ishlaydigan AI tizimlar, avtomatlashtirish platformalari va premium raqamli mahsulotlar.</p>
+        <span class="section-label" data-i18n="proj.label">PORTFOLIO</span>
+        <h2 class="section-title" data-i18n="proj.title">Mening Loyihalarim</h2>
+        <p class="section-subtitle" data-i18n="proj.subtitle">Real ishlaydigan AI tizimlar, avtomatlashtirish platformalari va premium raqamli mahsulotlar.</p>
       </div>
       <div class="projects-grid">
+        <!-- Premium Web Studio -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type" data-i18n="proj.p0t">WEB STUDIO</span>
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+          </div>
+          <h3 class="project-title" data-i18n="proj.p0n">Premium Web Studio</h3>
+          <p class="project-desc" data-i18n="proj.p0d">Kompaniyalar, shaxsiy brendlar va startup loyihalar uchun zamonaviy, tezkor va SEO optimallashtirilgan web-saytlarni yaratish hamda rivojlantirish tizimi.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Web Development</span>
+            <span class="tech-tag">SEO</span>
+            <span class="tech-tag">UI/UX Dizayn</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
+          </div>
+        </article>
+
         <!-- 1 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">AI ASSISTANT</span>
+            <span class="project-type" data-i18n="proj.p1t">AI ASSISTANT</span>
             <div class="project-icon"><i class="fas fa-brain"></i></div>
           </div>
-          <h3 class="project-title">Echo AI Assistant</h3>
-          <p class="project-desc">Marketing, tarjima, kontent ishlab chiqish, AI chat va biznes yordamchi funksiyalarini birlashtirgan tizim.</p>
+          <h3 class="project-title" data-i18n="proj.p1n">Echo AI Assistant</h3>
+          <p class="project-desc" data-i18n="proj.p1d">Marketing, tarjima, kontent ishlab chiqish, AI chat va biznes yordamchi funksiyalarini birlashtirgan tizim.</p>
           <div class="project-tech">
             <span class="tech-tag">AI Chat</span>
             <span class="tech-tag">Content Generator</span>
             <span class="tech-tag">Translation</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 2 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">EDUCATION AI</span>
+            <span class="project-type" data-i18n="proj.p2t">EDUCATION AI</span>
             <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
           </div>
-          <h3 class="project-title">AI O'qituvchi Bot</h3>
-          <p class="project-desc">O'quvchilar va talabalar uchun yaratilgan aqlli ta'lim yordamchisi.</p>
+          <h3 class="project-title" data-i18n="proj.p2n">AI O'qituvchi Bot</h3>
+          <p class="project-desc" data-i18n="proj.p2d">O'quvchilar va talabalar uchun yaratilgan aqlli ta'lim yordamchisi.</p>
           <div class="project-tech">
             <span class="tech-tag">Q&A System</span>
             <span class="tech-tag">Homework Help</span>
             <span class="tech-tag">Tests</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 3 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">BUILDIQ PRO</span>
+            <span class="project-type" data-i18n="proj.p3t">BUILDIQ PRO</span>
             <div class="project-icon"><i class="fas fa-building"></i></div>
           </div>
-          <h3 class="project-title">BuildIQ Pro</h3>
-          <p class="project-desc">Qurilish va interyer sohasiga mo'ljallangan AI tahlil tizimi.</p>
+          <h3 class="project-title" data-i18n="proj.p3n">BuildIQ Pro</h3>
+          <p class="project-desc" data-i18n="proj.p3d">Qurilish va interyer sohasiga mo'ljallangan AI tahlil tizimi.</p>
           <div class="project-tech">
             <span class="tech-tag">Image Analysis</span>
             <span class="tech-tag">Estimates</span>
             <span class="tech-tag">3D Viz</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 4 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">AI CONTENT</span>
+            <span class="project-type" data-i18n="proj.p4t">AI CONTENT</span>
             <div class="project-icon"><i class="fas fa-sparkles"></i></div>
           </div>
-          <h3 class="project-title">AI Content System</h3>
-          <p class="project-desc">Premium kontent ishlab chiqarish va marketing strategiyalari tizimi.</p>
+          <h3 class="project-title" data-i18n="proj.p4n">AI Content System</h3>
+          <p class="project-desc" data-i18n="proj.p4d">Premium kontent ishlab chiqarish va marketing strategiyalari tizimi.</p>
           <div class="project-tech">
             <span class="tech-tag">Instagram Reels</span>
             <span class="tech-tag">TikTok</span>
             <span class="tech-tag">Posters</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 5 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">E-COMMERCE AI</span>
+            <span class="project-type" data-i18n="proj.p5t">E-COMMERCE AI</span>
             <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
           </div>
-          <h3 class="project-title">AI Savdo Yordamchisi</h3>
-          <p class="project-desc">Telegram orqali mahsulot tavsiya qilish, mijozlar bilan muloqot qilish, buyurtmalarni qabul qilish va sotuv jarayonlarini avtomatlashtirish.</p>
+          <h3 class="project-title" data-i18n="proj.p5n">AI Savdo Yordamchisi</h3>
+          <p class="project-desc" data-i18n="proj.p5d">Telegram orqali mahsulot tavsiya qilish, mijozlar bilan muloqot qilish, buyurtmalarni qabul qilish va sotuv jarayonlarini avtomatlashtirish.</p>
           <div class="project-tech">
             <span class="tech-tag">Telegram Bot</span>
             <span class="tech-tag">AI Recommendations</span>
             <span class="tech-tag">Sales Automation</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 6 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">E-COMMERCE</span>
+            <span class="project-type" data-i18n="proj.p6t">E-COMMERCE</span>
             <div class="project-icon"><i class="fas fa-store"></i></div>
           </div>
-          <h3 class="project-title">Aqlli Savdo Platformasi</h3>
-          <p class="project-desc">Mahsulotlarni boshqarish, buyurtmalarni qabul qilish va AI tavsiyalar orqali savdoni oshirishga mo'ljallangan zamonaviy web platforma.</p>
+          <h3 class="project-title" data-i18n="proj.p6n">Aqlli Savdo Platformasi</h3>
+          <p class="project-desc" data-i18n="proj.p6d">Mahsulotlarni boshqarish, buyurtmalarni qabul qilish va AI tavsiyalar orqali savdoni oshirishga mo'ljallangan zamonaviy web platforma.</p>
           <div class="project-tech">
             <span class="tech-tag">Online Store</span>
             <span class="tech-tag">AI Suggestions</span>
             <span class="tech-tag">Payment</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 7 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">MEDIA</span>
+            <span class="project-type" data-i18n="proj.p7t">MEDIA</span>
             <div class="project-icon"><i class="fas fa-newspaper"></i></div>
           </div>
-          <h3 class="project-title">AI Yangiliklar Markazi</h3>
-          <p class="project-desc">Sun'iy intellekt va texnologiyalar sohasidagi yangiliklarni yig'ish, saralash va avtomatik e'lon qilish uchun ishlab chiqilgan media platforma.</p>
+          <h3 class="project-title" data-i18n="proj.p7n">AI Yangiliklar Markazi</h3>
+          <p class="project-desc" data-i18n="proj.p7d">Sun'iy intellekt va texnologiyalar sohasidagi yangiliklarni yig'ish, saralash va avtomatik e'lon qilish uchun ishlab chiqilgan media platforma.</p>
           <div class="project-tech">
             <span class="tech-tag">News Aggregator</span>
             <span class="tech-tag">AI Summaries</span>
             <span class="tech-tag">Auto Publishing</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 8 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">AUTOMATION</span>
+            <span class="project-type" data-i18n="proj.p8t">AUTOMATION</span>
             <div class="project-icon"><i class="fas fa-cog"></i></div>
           </div>
-          <h3 class="project-title">Biznes Avtomatlashtirish Tizimi</h3>
-          <p class="project-desc">Kompaniyalarning kundalik ish jarayonlarini avtomatlashtirish, ma'lumot almashish va vazifalarni boshqarish uchun yaratilgan tizim.</p>
+          <h3 class="project-title" data-i18n="proj.p8n">Biznes Avtomatlashtirish Tizimi</h3>
+          <p class="project-desc" data-i18n="proj.p8d">Kompaniyalarning kundalik ish jarayonlarini avtomatlashtirish, ma'lumot almashish va vazifalarni boshqarish uchun yaratilgan tizim.</p>
           <div class="project-tech">
             <span class="tech-tag">CRM</span>
             <span class="tech-tag">Workflow</span>
             <span class="tech-tag">Integration</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 9 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">ANALYTICS</span>
+            <span class="project-type" data-i18n="proj.p9t">ANALYTICS</span>
             <div class="project-icon"><i class="fas fa-chart-line"></i></div>
           </div>
-          <h3 class="project-title">AI Biznes Paneli</h3>
-          <p class="project-desc">Sotuvlar, mijozlar va biznes ko'rsatkichlarini real vaqt rejimida kuzatish va tahlil qilish imkonini beruvchi boshqaruv tizimi.</p>
+          <h3 class="project-title" data-i18n="proj.p9n">AI Biznes Paneli</h3>
+          <p class="project-desc" data-i18n="proj.p9d">Sotuvlar, mijozlar va biznes ko'rsatkichlarini real vaqt rejimida kuzatish va tahlil qilish imkonini beruvchi boshqaruv tizimi.</p>
           <div class="project-tech">
             <span class="tech-tag">Analytics</span>
             <span class="tech-tag">Dashboard</span>
             <span class="tech-tag">Forecasting</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 10 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">MEDIA STUDIO</span>
+            <span class="project-type" data-i18n="proj.p10t">MEDIA STUDIO</span>
             <div class="project-icon"><i class="fas fa-film"></i></div>
           </div>
-          <h3 class="project-title">AI Media Studio</h3>
-          <p class="project-desc">Video, poster, reklama materiallari va ijtimoiy tarmoqlar uchun kontentlarni AI yordamida yaratish va boshqarish tizimi.</p>
+          <h3 class="project-title" data-i18n="proj.p10n">AI Media Studio</h3>
+          <p class="project-desc" data-i18n="proj.p10d">Video, poster, reklama materiallari va ijtimoiy tarmoqlar uchun kontentlarni AI yordamida yaratish va boshqarish tizimi.</p>
           <div class="project-tech">
             <span class="tech-tag">Video Creation</span>
             <span class="tech-tag">Design</span>
             <span class="tech-tag">Marketing</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
 
         <!-- 11 -->
         <article class="project-card">
           <div class="project-header">
-            <span class="project-type">CRM</span>
+            <span class="project-type" data-i18n="proj.p11t">CRM</span>
             <div class="project-icon"><i class="fas fa-users"></i></div>
           </div>
-          <h3 class="project-title">AI Mijozlar Markazi</h3>
-          <p class="project-desc">Telegram, web-sayt va ijtimoiy tarmoqlardan kelgan murojaatlarni bitta markazda yig'ib boshqaruvchi AI tizimi.</p>
+          <h3 class="project-title" data-i18n="proj.p11n">AI Mijozlar Markazi</h3>
+          <p class="project-desc" data-i18n="proj.p11d">Telegram, web-sayt va ijtimoiy tarmoqlardan kelgan murojaatlarni bitta markazda yig'ib boshqaruvchi AI tizimi.</p>
           <div class="project-tech">
             <span class="tech-tag">Lead Management</span>
             <span class="tech-tag">CRM</span>
             <span class="tech-tag">AI Operator</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Case Study</a>
-            <a href="#" class="project-link live">Live</a>
+            <a href="#" class="project-link" data-i18n="common.case">Case Study</a>
+            <a href="#" class="project-link live" data-i18n="common.live">Live</a>
           </div>
         </article>
       </div>
@@ -569,70 +599,70 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="services" class="services">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">XIZMATLAR</span>
-        <h2 class="section-title">Nima Bera Olamiz</h2>
-        <p class="section-subtitle">Premium xizmatlar va mahsulotlar.</p>
+        <span class="section-label" data-i18n="svc.label">XIZMATLAR</span>
+        <h2 class="section-title" data-i18n="svc.title">Nima Bera Olamiz</h2>
+        <p class="section-subtitle" data-i18n="svc.subtitle">Premium xizmatlar va mahsulotlar.</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-brain"></i></div>
-          <h3>AI Systems Development</h3>
-          <p>Custom AI tizimlari va intelligent solutions yaratish</p>
+          <h3 data-i18n="svc.s1t">AI Systems Development</h3>
+          <p data-i18n="svc.s1d">Custom AI tizimlari va intelligent solutions yaratish</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fab fa-telegram"></i></div>
-          <h3>Telegram Bot Development</h3>
-          <p>Powerful Telegram botlar va automation tools</p>
+          <h3 data-i18n="svc.s2t">Telegram Bot Development</h3>
+          <p data-i18n="svc.s2d">Powerful Telegram botlar va automation tools</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-cog"></i></div>
-          <h3>Business Automation</h3>
-          <p>Biznes jarayonlarini avtomatlashtirish va optimization</p>
+          <h3 data-i18n="svc.s3t">Business Automation</h3>
+          <p data-i18n="svc.s3d">Biznes jarayonlarini avtomatlashtirish va optimization</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-film"></i></div>
-          <h3>AI Media Production</h3>
-          <p>Video, poster va marketing materiallari yaratish</p>
+          <h3 data-i18n="svc.s4t">AI Media Production</h3>
+          <p data-i18n="svc.s4d">Video, poster va marketing materiallari yaratish</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-code"></i></div>
-          <h3>Web Development</h3>
-          <p>Premium web saytlar va digital platforms</p>
+          <h3 data-i18n="svc.s5t">Web Development</h3>
+          <p data-i18n="svc.s5d">Premium web saytlar va digital platforms</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-plug"></i></div>
-          <h3>API Integrations</h3>
-          <p>Turli xil servicelari integrate qilish va management</p>
+          <h3 data-i18n="svc.s6t">API Integrations</h3>
+          <p data-i18n="svc.s6d">Turli xil servicelari integrate qilish va management</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-magic"></i></div>
-          <h3>Prompt Engineering</h3>
-          <p>AI modellar uchun advanced prompts yaratish</p>
+          <h3 data-i18n="svc.s7t">Prompt Engineering</h3>
+          <p data-i18n="svc.s7d">AI modellar uchun advanced prompts yaratish</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-video"></i></div>
-          <h3>AI Video Generation</h3>
-          <p>AI yordamida video content yaratish</p>
+          <h3 data-i18n="svc.s8t">AI Video Generation</h3>
+          <p data-i18n="svc.s8d">AI yordamida video content yaratish</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-image"></i></div>
-          <h3>AI Image Generation</h3>
-          <p>Professional imageler va visual content</p>
+          <h3 data-i18n="svc.s9t">AI Image Generation</h3>
+          <p data-i18n="svc.s9d">Professional imageler va visual content</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-arrows-alt"></i></div>
-          <h3>Workflow Automation</h3>
-          <p>Complex workflow tizimlari yaratish va setup</p>
+          <h3 data-i18n="svc.s10t">Workflow Automation</h3>
+          <p data-i18n="svc.s10d">Complex workflow tizimlari yaratish va setup</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-database"></i></div>
-          <h3>CRM Integrations</h3>
-          <p>CRM sistemalari setup va customization</p>
+          <h3 data-i18n="svc.s11t">CRM Integrations</h3>
+          <p data-i18n="svc.s11d">CRM sistemalari setup va customization</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-rocket"></i></div>
-          <h3>Startup MVP Development</h3>
-          <p>Startup ideyalarni MVP ga aylantirish</p>
+          <h3 data-i18n="svc.s12t">Startup MVP Development</h3>
+          <p data-i18n="svc.s12d">Startup ideyalarni MVP ga aylantirish</p>
         </div>
       </div>
     </div>
@@ -644,99 +674,70 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="skills" class="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">ARSENAL</span>
-        <h2 class="section-title">Texnologiyalar</h2>
-        <p class="section-subtitle">Eng zamonaviy va kuchli texnologiyalar bilan ishlayman.</p>
+        <span class="section-label" data-i18n="skills.label">ARSENAL</span>
+        <h2 class="section-title"><span data-i18n="skills.title">Texnologiyalar</span> <span class="title-accent" data-i18n="skills.accent">Ustasi</span></h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Frontend · Backend · AI & Automation</p>
       </div>
-      <div class="tech-showcase">
-<div class="tech-grid">
 
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/openai/ffffff" alt="ChatGPT">
-    </div>
-    <span>ChatGPT</span>
-  </div>
+      <div class="tech-marquee-wrap">
+        <div class="tech-marquee-row marquee-left">
+          <div class="tech-marquee-track">
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="ChatGPT"><span>ChatGPT</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Claude"><span>Claude</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/googlegemini/ffffff" alt="Gemini"><span>Gemini</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI"><span>OpenAI API</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"><span>Python</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TypeScript"><span>TypeScript</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML5"><span>HTML5</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS3"><span>CSS3</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"><span>React</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js"><span>Next.js</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="ChatGPT"><span>ChatGPT</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Claude"><span>Claude</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/googlegemini/ffffff" alt="Gemini"><span>Gemini</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI"><span>OpenAI API</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"><span>Python</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TypeScript"><span>TypeScript</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML5"><span>HTML5</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS3"><span>CSS3</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"><span>React</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js"><span>Next.js</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
+          </div>
+        </div>
 
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Claude">
-    </div>
-    <span>Claude</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/google/ffffff" alt="Gemini">
-    </div>
-    <span>Gemini</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI API">
-    </div>
-    <span>OpenAI API</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-python"></i>
-    </div>
-    <span>Python</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-js"></i>
-    </div>
-    <span>JavaScript</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-html5"></i>
-    </div>
-    <span>HTML5</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-css3-alt"></i>
-    </div>
-    <span>CSS3</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/n8n/ffffff" alt="n8n">
-    </div>
-    <span>n8n</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <img src="https://cdn.simpleicons.org/make/ffffff" alt="Make">
-    </div>
-    <span>Make</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-telegram"></i>
-    </div>
-    <span>Telegram API</span>
-  </div>
-
-  <div class="tech-item">
-    <div class="tech-icon">
-      <i class="fab fa-github"></i>
-    </div>
-    <span>GitHub</span>
-  </div>
-
-    </div>
-    </div>
+        <div class="tech-marquee-row marquee-right">
+          <div class="tech-marquee-track">
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/n8n/ffffff" alt="n8n"><span>n8n</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/make/ffffff" alt="Make"><span>Make</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram API"><span>Telegram API</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js"><span>Node.js</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel"><span>Vercel</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/git/ffffff" alt="Git"><span>Git</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL"><span>PostgreSQL</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma"><span>Figma</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/framer/ffffff" alt="Framer Motion"><span>Framer Motion</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/vite/ffffff" alt="Vite"><span>Vite</span></div>
+            <div class="tech-pill"><i class="fas fa-wand-magic-sparkles"></i><span>Prompt Eng.</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/n8n/ffffff" alt="n8n"><span>n8n</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/make/ffffff" alt="Make"><span>Make</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram API"><span>Telegram API</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js"><span>Node.js</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel"><span>Vercel</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/git/ffffff" alt="Git"><span>Git</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL"><span>PostgreSQL</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma"><span>Figma</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/framer/ffffff" alt="Framer Motion"><span>Framer Motion</span></div>
+            <div class="tech-pill"><img src="https://cdn.simpleicons.org/vite/ffffff" alt="Vite"><span>Vite</span></div>
+            <div class="tech-pill"><i class="fas fa-wand-magic-sparkles"></i><span>Prompt Eng.</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -746,39 +747,39 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section class="digital-ecosystem">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">ECOSYSTEM</span>
-        <h2 class="section-title">Raqamli Platformalar</h2>
-        <p class="section-subtitle">Barcha muhim social platformalarda mavjud.</p>
+        <span class="section-label" data-i18n="eco.label">ECOSYSTEM</span>
+        <h2 class="section-title" data-i18n="eco.title">Raqamli Platformalar</h2>
+        <p class="section-subtitle" data-i18n="eco.subtitle">Barcha muhim social platformalarda mavjud.</p>
       </div>
       <div class="social-cards-grid">
-        <a href="https://t.me/Azizjon_Asadov" target="_blank" class="social-card">
+        <a href="https://t.me/AzizAsadov0" target="_blank" rel="noopener noreferrer" class="social-card">
           <div class="social-icon"><i class="fab fa-telegram"></i></div>
-          <h3>Telegram</h3>
-          <p>To'g'ridan-to'g'ri aloqa va hamkorlik</p>
+          <h3 data-i18n="eco.tgT">Telegram Kanal</h3>
+          <p data-i18n="eco.tgD">Foydali ma'lumotlar va darsliklar</p>
           <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
         <a href="https://instagram.com/azizasadov_official" target="_blank" class="social-card">
           <div class="social-icon"><i class="fab fa-instagram"></i></div>
-          <h3>Instagram</h3>
-          <p>AI kontent va media ishlab chiqarish</p>
+          <h3 data-i18n="eco.igT">Instagram</h3>
+          <p data-i18n="eco.igD">AI kontent va media ishlab chiqarish</p>
           <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
         <a href="https://linkedin.com/in/aziz-asadov-5956373b1" target="_blank" class="social-card">
           <div class="social-icon"><i class="fab fa-linkedin"></i></div>
-          <h3>LinkedIn</h3>
-          <p>Professional profil va biznes aloqalar</p>
+          <h3 data-i18n="eco.liT">LinkedIn</h3>
+          <p data-i18n="eco.liD">Professional profil va biznes aloqalar</p>
           <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
         <a href="https://facebook.com/azizjonasadov14" target="_blank" class="social-card">
           <div class="social-icon"><i class="fab fa-facebook"></i></div>
-          <h3>Facebook</h3>
-          <p>Rasmiy ijtimoiy sahifa</p>
+          <h3 data-i18n="eco.fbT">Facebook</h3>
+          <p data-i18n="eco.fbD">Rasmiy ijtimoiy sahifa</p>
           <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
         <a href="https://x.com/AzizjonAsadov" target="_blank" class="social-card">
           <div class="social-icon"><i class="fab fa-x-twitter"></i></div>
-          <h3>X (Twitter)</h3>
-          <p>AI va texnologiya yangiliklari</p>
+          <h3 data-i18n="eco.xT">X (Twitter)</h3>
+          <p data-i18n="eco.xD">AI va texnologiya yangiliklari</p>
           <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
       </div>
@@ -791,30 +792,35 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">BOG'LANISH</span>
-        <h2 class="section-title">Bog'lanish</h2>
-        <p class="section-subtitle">Har qanday savollar uchun bog'laning.</p>
+        <span class="section-label" data-i18n="contact.label">BOG'LANISH</span>
+        <h2 class="section-title" data-i18n="contact.title">Bog'lanish</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Har qanday savollar uchun bog'laning.</p>
       </div>
       <div class="contact-grid">
-        <a href="tel:+998505033441" class="contact-card">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <h3>Telefon</h3>
+        <a href="sms:+998505033441" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-comment-sms"></i></div>
+          <h3 data-i18n="contact.sms">SMS</h3>
           <p>+998 50 503 34 41</p>
         </a>
-        <a href="https://t.me/Azizjon_Asadov" target="_blank" class="contact-card">
+        <a href="tel:+998505033441" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <h3 data-i18n="contact.phone">Telefon</h3>
+          <p>+998 50 503 34 41</p>
+        </a>
+        <a href="https://t.me/Azizjon_Asadov" target="_blank" rel="noopener noreferrer" class="contact-card">
           <div class="contact-icon"><i class="fab fa-telegram"></i></div>
-          <h3>Telegram</h3>
+          <h3 data-i18n="contact.tg">Telegram</h3>
           <p>@Azizjon_Asadov</p>
         </a>
-        <a href="https://instagram.com/azizasadov_official" target="_blank" class="contact-card">
-          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-          <h3>Instagram</h3>
-          <p>@azizasadov_official</p>
+        <a href="https://t.me/AzizjonAsadov_bot" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-robot"></i></div>
+          <h3 data-i18n="contact.bot">Telegram Bot</h3>
+          <p>@AzizjonAsadov_bot</p>
         </a>
-        <a href="mailto:azizasadov935@gmail.com" class="contact-card">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <h3>Email</h3>
-          <p>azizasadov935@gmail.com</p>
+        <a href="https://instagram.com/azizasadov_official" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+          <h3 data-i18n="contact.ig">Instagram</h3>
+          <p>@azizasadov_official</p>
         </a>
       </div>
     </div>
@@ -827,12 +833,12 @@ Men oddiy g'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatl
     <div class="container">
       <div class="footer-content">
         <div class="footer-text">
-          <p>Aziz Asadov © 2026. Barcha huquqlar saqlanib qolgan.</p>
-          <p>AI yordamida yaratilgan • Premium portfolio</p>
+          <p data-i18n="footer.c1">Aziz Asadov © 2026. Barcha huquqlar saqlanib qolgan.</p>
+          <p data-i18n="footer.c2">AI yordamida yaratilgan • Premium portfolio</p>
         </div>
         <div class="footer-links">
           <a href="https://github.com" target="_blank">GitHub</a>
-          <a href="https://t.me/Azizjon_Asadov" target="_blank">Telegram</a>
+          <a href="https://t.me/AzizAsadov0" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a href="https://instagram.com/azizasadov_official" target="_blank">Instagram</a>
         </div>
       </div>

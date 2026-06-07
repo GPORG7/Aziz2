@@ -1,18 +1,18 @@
 // Interactions va hover effects
 
-const avatar = document.querySelector('.avatar-container');
-if (avatar) {
+const avatar = document.querySelector('.avatar-wrapper');
+if (avatar && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   document.addEventListener('mousemove', (e) => {
     const rect = avatar.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    
-    const angleX = (e.clientY - centerY) / 30;
-    const angleY = (e.clientX - centerX) / 30;
-    
+
+    const angleX = (e.clientY - centerY) / 40;
+    const angleY = (e.clientX - centerX) / 40;
+
     avatar.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
   });
-  
+
   document.addEventListener('mouseleave', () => {
     avatar.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
   });

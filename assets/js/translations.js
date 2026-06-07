@@ -1,45 +1,364 @@
-// Language translations
-
 const translations = {
   uz: {
+    'meta.title': 'Aziz Asadov | AI Builder & Digital Creator | Premium Portfolio',
+    'meta.description': 'Aziz Asadov — AI Builder, Digital Creator va Startup Founder. Sun\'iy intellekt, Telegram botlar, avtomatlashtirish va premium raqamli mahsulotlar.',
     'nav.home': 'Bosh sahifa',
     'nav.about': 'Men haqimda',
     'nav.experience': 'Tajriba',
     'nav.projects': 'Loyihalar',
     'nav.skills': 'Ko\'nikmalar',
     'nav.services': 'Xizmatlar',
-    'nav.contact': 'Aloqa'
+    'nav.contact': 'Aloqa',
+    'logo.subtitle': 'AI Builder • Digital Creator',
+    'loader.subtitle': 'Raqamli ekotizim yuklanmoqda...',
+    'loader.quote': 'Kod. G\'oya. Intellekt. Natija.',
+    'loader.tagline': 'AI BILAN CHEKSIZ IMKONIYATLAR',
+    'loader.s1': 'AI SYSTEMS',
+    'loader.s2': 'DATABASE',
+    'loader.s3': 'API SERVICES',
+    'loader.s4': 'AUTOMATION',
+    'loader.s5': 'MEDIA ENGINE',
+    'hero.badge': 'AI Builder • Digital Creator • Team Leader',
+    'hero.desc': 'Sun\'iy intellekt asosida real biznes yechimlari, avtomatlashtirish tizimlari va premium kontent ekotizimlari yarataman.<br><br>Men oddiy g\'oyalarni real ishlaydigan AI mahsulotlari, Telegram botlar, avtomatlashtirish tizimlari va raqamli platformalarga aylantiraman. Maqsadim — texnologiyalar yordamida bizneslar va insonlar uchun vaqt tejaydigan, samaradorlikni oshiradigan va real natija beradigan mahsulotlar yaratish.',
+    'hero.cta1': 'Loyihalarni Ko\'rish',
+    'hero.cta2': 'Bog\'lanish',
+    'hero.stat1': 'AI Loyihalar',
+    'hero.stat2': 'Kontentlar',
+    'hero.stat3': 'Hamkorlar',
+    'hero.stat4': 'Web Saytlar',
+    'hero.stat5': 'Innovatsiya',
+    'hero.badge1': 'AI Strategist',
+    'hero.badge2': 'Team Leader',
+    'hero.badge3': 'Founder',
+    'about.label': 'BIO',
+    'about.title': 'Men haqimda',
+    'about.subtitle': 'Men Asadov Aziz Alisherovich. Sun\'iy intellekt, avtomatlashtirish va raqamli mahsulotlar yaratish yo\'nalishida faoliyat yuritaman.',
+    'about.cardTitle': 'G\'oyadan Tayyor Mahsulotgacha',
+    'about.card1': 'Hozirda Izdihom PR/Marketing Agency kompaniyasida AI Team Leader lavozimida ishlayman. Faoliyatim davomida turli bizneslar uchun AI yechimlari, Telegram botlar, avtomatlashtirish tizimlari va premium kontent ishlab chiqish loyihalarida qatnashganman.',
+    'about.card2': 'Maqsadim: Sun\'iy intellekt yordamida real muammolarni hal qiladigan, bizneslarni tezlashtiradigan va inson vaqtini tejaydigan mahsulotlar yaratish.',
+    'about.i1t': 'Lavozim', 'about.i1v': 'AI Team Leader', 'about.i1s': 'Izdihom PR/Marketing Agency',
+    'about.i2t': 'Yo\'nalishlar', 'about.i2v': 'AI Tizimlari', 'about.i2s': 'Telegram Botlar • Automation',
+    'about.i3t': 'Mutaxassislik', 'about.i3v': 'Prompt Engineering', 'about.i3s': 'AI Media Production',
+    'about.i4t': 'Faoliyat', 'about.i4v': 'Digital Ecosystem', 'about.i4s': 'Startup Development',
+    'ach.a1': 'AI Loyihalar', 'ach.a2': 'Yaratilgan Kontentlar', 'ach.a3': 'Hamkorlar',
+    'ach.a4': 'Web saytlar va botlar', 'ach.a5': 'Innovatsiya',
+    'exp.label': 'TAJRIBA', 'exp.title': 'Amaliy Faoliyat', 'exp.subtitle': 'Real loyihalar va amaliy tajribalar.',
+    'exp.e1l': '2025 - Hozir', 'exp.e1t': 'AI Team Leader', 'exp.e1c': 'Izdihom PR/Marketing Agency',
+    'exp.e1d': 'AI bo\'limini boshqarish, AI strategiyalar yaratish, avtomatlashtirish tizimlarini joriy etish',
+    'exp.e2l': 'AI Media Production', 'exp.e2t': 'Kontent Ekotizimi',
+    'exp.e2d': 'Brendlar uchun video roliklar, reklama materiallari, posterlar va AI kontentlar yaratish',
+    'exp.e3l': 'Automation Systems', 'exp.e3t': 'Biznes Avtomatlashtirish',
+    'exp.e3d': 'CRM integratsiyalari, AI yordamchilar, workflow tizimlari va murojaat tizimlari',
+    'exp.e4l': 'Telegram Ecosystem', 'exp.e4t': 'Telegram Botlar',
+    'exp.e4d': 'Telegram botlar, AI yordamchilar, avto javob tizimlari va murojaat tizimlari',
+    'exp.e5l': 'Startup Development', 'exp.e5t': 'AI Mahsulotlar',
+    'exp.e5d': 'SaaS platformalar, raqamli ekotizimlar, MVP development va startup loyihalar',
+    'proj.label': 'PORTFOLIO', 'proj.title': 'Mening Loyihalarim',
+    'proj.subtitle': 'Real ishlaydigan AI tizimlar, avtomatlashtirish platformalari va premium raqamli mahsulotlar.',
+    'proj.p0t': 'WEB STUDIO', 'proj.p0n': 'Premium Web Studio',
+    'proj.p0d': 'Kompaniyalar, shaxsiy brendlar va startup loyihalar uchun zamonaviy, tezkor va SEO optimallashtirilgan web-saytlarni yaratish hamda rivojlantirish tizimi.',
+    'proj.p1t': 'AI ASSISTANT', 'proj.p1n': 'Echo AI Assistant',
+    'proj.p1d': 'Marketing, tarjima, kontent ishlab chiqish, AI chat va biznes yordamchi funksiyalarini birlashtirgan tizim.',
+    'proj.p2t': 'EDUCATION AI', 'proj.p2n': 'AI O\'qituvchi Bot',
+    'proj.p2d': 'O\'quvchilar va talabalar uchun yaratilgan aqlli ta\'lim yordamchisi.',
+    'proj.p3t': 'BUILDIQ PRO', 'proj.p3n': 'BuildIQ Pro',
+    'proj.p3d': 'Qurilish va interyer sohasiga mo\'ljallangan AI tahlil tizimi.',
+    'proj.p4t': 'AI CONTENT', 'proj.p4n': 'AI Content System',
+    'proj.p4d': 'Premium kontent ishlab chiqarish va marketing strategiyalari tizimi.',
+    'proj.p5t': 'E-COMMERCE AI', 'proj.p5n': 'AI Savdo Yordamchisi',
+    'proj.p5d': 'Telegram orqali mahsulot tavsiya qilish, mijozlar bilan muloqot va sotuv jarayonlarini avtomatlashtirish.',
+    'proj.p6t': 'E-COMMERCE', 'proj.p6n': 'Aqlli Savdo Platformasi',
+    'proj.p6d': 'Mahsulotlarni boshqarish, buyurtmalarni qabul qilish va AI tavsiyalar orqali savdoni oshirishga mo\'ljallangan zamonaviy web platforma.',
+    'proj.p7t': 'MEDIA', 'proj.p7n': 'AI Yangiliklar Markazi',
+    'proj.p7d': 'Sun\'iy intellekt va texnologiyalar yangiliklarini yig\'ish, saralash va avtomatik e\'lon qilish platformasi.',
+    'proj.p8t': 'AUTOMATION', 'proj.p8n': 'Biznes Avtomatlashtirish Tizimi',
+    'proj.p8d': 'Kompaniyalarning kundalik ish jarayonlarini avtomatlashtirish va vazifalarni boshqarish tizimi.',
+    'proj.p9t': 'ANALYTICS', 'proj.p9n': 'AI Biznes Paneli',
+    'proj.p9d': 'Sotuvlar, mijozlar va biznes ko\'rsatkichlarini real vaqt rejimida kuzatish va tahlil qilish tizimi.',
+    'proj.p10t': 'MEDIA STUDIO', 'proj.p10n': 'AI Media Studio',
+    'proj.p10d': 'Video, poster, reklama materiallari va ijtimoiy tarmoqlar uchun kontentlarni AI yordamida yaratish tizimi.',
+    'proj.p11t': 'CRM', 'proj.p11n': 'AI Mijozlar Markazi',
+    'proj.p11d': 'Telegram, web-sayt va ijtimoiy tarmoqlardan kelgan murojaatlarni bitta markazda boshqaruvchi AI tizimi.',
+    'common.case': 'Case Study', 'common.live': 'Live',
+    'svc.label': 'XIZMATLAR', 'svc.title': 'Nima Bera Olamiz', 'svc.subtitle': 'Premium xizmatlar va mahsulotlar.',
+    'svc.s1t': 'AI Tizimlari', 'svc.s1d': 'Maxsus AI tizimlari va intelligent yechimlar yaratish',
+    'svc.s2t': 'Telegram Botlar', 'svc.s2d': 'Kuchli Telegram botlar va avtomatlashtirish vositalari',
+    'svc.s3t': 'Biznes Avtomatlashtirish', 'svc.s3d': 'Biznes jarayonlarini avtomatlashtirish va optimallashtirish',
+    'svc.s4t': 'AI Media Production', 'svc.s4d': 'Video, poster va marketing materiallari yaratish',
+    'svc.s5t': 'Web Development', 'svc.s5d': 'Premium web saytlar va raqamli platformalar',
+    'svc.s6t': 'API Integratsiyalar', 'svc.s6d': 'Turli xil servislarni integratsiya qilish va boshqarish',
+    'svc.s7t': 'Prompt Engineering', 'svc.s7d': 'AI modellar uchun ilg\'or promptlar yaratish',
+    'svc.s8t': 'AI Video Generation', 'svc.s8d': 'AI yordamida video kontent yaratish',
+    'svc.s9t': 'AI Image Generation', 'svc.s9d': 'Professional rasmlar va vizual kontent',
+    'svc.s10t': 'Workflow Automation', 'svc.s10d': 'Murakkab workflow tizimlarini yaratish va sozlash',
+    'svc.s11t': 'CRM Integratsiyalar', 'svc.s11d': 'CRM tizimlarini sozlash va moslashtirish',
+    'svc.s12t': 'Startup MVP Development', 'svc.s12d': 'Startup g\'oyalarini MVP ga aylantirish',
+    'skills.label': 'ARSENAL', 'skills.title': 'Texnologiyalar', 'skills.accent': 'Ustasi',
+    'skills.subtitle': 'Frontend · Backend · AI & Automation',
+    'eco.label': 'ECOSYSTEM', 'eco.title': 'Raqamli Platformalar',
+    'eco.subtitle': 'Barcha muhim ijtimoiy platformalarda mavjud.',
+    'eco.tgT': 'Telegram Kanal', 'eco.tgD': 'Foydali ma\'lumotlar va darsliklar',
+    'eco.igT': 'Instagram', 'eco.igD': 'AI kontent va media ishlab chiqarish',
+    'eco.liT': 'LinkedIn', 'eco.liD': 'Professional profil va biznes aloqalar',
+    'eco.fbT': 'Facebook', 'eco.fbD': 'Rasmiy ijtimoiy sahifa',
+    'eco.xT': 'X (Twitter)', 'eco.xD': 'AI va texnologiya yangiliklari',
+    'contact.label': 'BOG\'LANISH', 'contact.title': 'Bog\'lanish',
+    'contact.subtitle': 'Har qanday savollar uchun bog\'laning.',
+    'contact.sms': 'SMS', 'contact.phone': 'Telefon', 'contact.tg': 'Telegram',
+    'contact.bot': 'Telegram Bot', 'contact.ig': 'Instagram',
+    'footer.c1': 'Aziz Asadov © 2026. Barcha huquqlar saqlanib qolgan.',
+    'footer.c2': 'AI yordamida yaratilgan • Premium portfolio',
+    'dock.bot': 'Murojaat boti'
   },
   en: {
-    'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.experience': 'Experience',
-    'nav.projects': 'Projects',
-    'nav.skills': 'Skills',
-    'nav.services': 'Services',
-    'nav.contact': 'Contact'
+    'meta.title': 'Aziz Asadov | AI Builder & Digital Creator | Premium Portfolio',
+    'meta.description': 'Aziz Asadov — AI Builder, Digital Creator and Startup Founder. Artificial intelligence, Telegram bots, automation and premium digital products.',
+    'nav.home': 'Home', 'nav.about': 'About', 'nav.experience': 'Experience',
+    'nav.projects': 'Projects', 'nav.skills': 'Skills', 'nav.services': 'Services', 'nav.contact': 'Contact',
+    'logo.subtitle': 'AI Builder • Digital Creator',
+    'loader.subtitle': 'Initializing Digital Ecosystem...',
+    'loader.quote': 'Code. Idea. Intelligence. Result.',
+    'loader.tagline': 'UNLIMITED POSSIBILITIES WITH AI',
+    'loader.s1': 'AI SYSTEMS', 'loader.s2': 'DATABASE', 'loader.s3': 'API SERVICES',
+    'loader.s4': 'AUTOMATION', 'loader.s5': 'MEDIA ENGINE',
+    'hero.badge': 'AI Builder • Digital Creator • Team Leader',
+    'hero.desc': 'I create real business solutions, automation systems and premium content ecosystems powered by artificial intelligence.<br><br>I turn simple ideas into working AI products, Telegram bots, automation systems and digital platforms. My goal is to build solutions that save time, increase efficiency and deliver real results for businesses and people.',
+    'hero.cta1': 'View Projects', 'hero.cta2': 'Get in Touch',
+    'hero.stat1': 'AI Projects', 'hero.stat2': 'Content Pieces', 'hero.stat3': 'Partners',
+    'hero.stat4': 'Websites', 'hero.stat5': 'Innovation',
+    'hero.badge1': 'AI Strategist', 'hero.badge2': 'Team Leader', 'hero.badge3': 'Founder',
+    'about.label': 'BIO', 'about.title': 'About Me',
+    'about.subtitle': 'I am Aziz Asadov. I work in artificial intelligence, automation and digital product development.',
+    'about.cardTitle': 'From Idea to Finished Product',
+    'about.card1': 'I currently work as AI Team Leader at Izdihom PR/Marketing Agency. I have participated in AI solutions, Telegram bots, automation systems and premium content projects for various businesses.',
+    'about.card2': 'My goal is to create products that solve real problems, accelerate businesses and save people\'s time using artificial intelligence.',
+    'about.i1t': 'Position', 'about.i1v': 'AI Team Leader', 'about.i1s': 'Izdihom PR/Marketing Agency',
+    'about.i2t': 'Focus Areas', 'about.i2v': 'AI Systems', 'about.i2s': 'Telegram Bots • Automation',
+    'about.i3t': 'Expertise', 'about.i3v': 'Prompt Engineering', 'about.i3s': 'AI Media Production',
+    'about.i4t': 'Activity', 'about.i4v': 'Digital Ecosystem', 'about.i4s': 'Startup Development',
+    'ach.a1': 'AI Projects', 'ach.a2': 'Content Created', 'ach.a3': 'Partners',
+    'ach.a4': 'Websites & Bots', 'ach.a5': 'Innovation',
+    'exp.label': 'EXPERIENCE', 'exp.title': 'Professional Journey', 'exp.subtitle': 'Real projects and hands-on experience.',
+    'exp.e1l': '2025 - Present', 'exp.e1t': 'AI Team Leader', 'exp.e1c': 'Izdihom PR/Marketing Agency',
+    'exp.e1d': 'Managing the AI department, developing AI strategies and implementing automation systems',
+    'exp.e2l': 'AI Media Production', 'exp.e2t': 'Content Ecosystem',
+    'exp.e2d': 'Creating video reels, ads, posters and AI-powered content for brands',
+    'exp.e3l': 'Automation Systems', 'exp.e3t': 'Business Automation',
+    'exp.e3d': 'CRM integrations, AI assistants, workflow systems and inquiry management',
+    'exp.e4l': 'Telegram Ecosystem', 'exp.e4t': 'Telegram Bots',
+    'exp.e4d': 'Telegram bots, AI assistants, auto-reply systems and inquiry platforms',
+    'exp.e5l': 'Startup Development', 'exp.e5t': 'AI Products',
+    'exp.e5d': 'SaaS platforms, digital ecosystems, MVP development and startup projects',
+    'proj.label': 'PORTFOLIO', 'proj.title': 'My Projects',
+    'proj.subtitle': 'Working AI systems, automation platforms and premium digital products.',
+    'proj.p0t': 'WEB STUDIO', 'proj.p0n': 'Premium Web Studio',
+    'proj.p0d': 'A system for creating and developing modern, fast and SEO-optimized websites for companies, personal brands and startups.',
+    'proj.p1t': 'AI ASSISTANT', 'proj.p1n': 'Echo AI Assistant',
+    'proj.p1d': 'A system combining marketing, translation, content creation, AI chat and business assistant features.',
+    'proj.p2t': 'EDUCATION AI', 'proj.p2n': 'AI Teacher Bot',
+    'proj.p2d': 'An intelligent education assistant built for students and learners.',
+    'proj.p3t': 'BUILDIQ PRO', 'proj.p3n': 'BuildIQ Pro',
+    'proj.p3d': 'An AI analysis system designed for construction and interior design.',
+    'proj.p4t': 'AI CONTENT', 'proj.p4n': 'AI Content System',
+    'proj.p4d': 'A premium content production and marketing strategy system.',
+    'proj.p5t': 'E-COMMERCE AI', 'proj.p5n': 'AI Sales Assistant',
+    'proj.p5d': 'Product recommendations, customer communication and sales automation via Telegram.',
+    'proj.p6t': 'E-COMMERCE', 'proj.p6n': 'Smart Commerce Platform',
+    'proj.p6d': 'A modern web platform for product management, orders and AI-driven sales growth.',
+    'proj.p7t': 'MEDIA', 'proj.p7n': 'AI News Hub',
+    'proj.p7d': 'A media platform for collecting, filtering and auto-publishing AI and tech news.',
+    'proj.p8t': 'AUTOMATION', 'proj.p8n': 'Business Automation System',
+    'proj.p8d': 'A system for automating daily workflows and task management in companies.',
+    'proj.p9t': 'ANALYTICS', 'proj.p9n': 'AI Business Dashboard',
+    'proj.p9d': 'Real-time monitoring and analysis of sales, customers and business metrics.',
+    'proj.p10t': 'MEDIA STUDIO', 'proj.p10n': 'AI Media Studio',
+    'proj.p10d': 'AI-powered creation of videos, posters, ads and social media content.',
+    'proj.p11t': 'CRM', 'proj.p11n': 'AI Customer Hub',
+    'proj.p11d': 'An AI system that centralizes inquiries from Telegram, websites and social media.',
+    'common.case': 'Case Study', 'common.live': 'Live',
+    'svc.label': 'SERVICES', 'svc.title': 'What We Offer', 'svc.subtitle': 'Premium services and products.',
+    'svc.s1t': 'AI Systems', 'svc.s1d': 'Building custom AI systems and intelligent solutions',
+    'svc.s2t': 'Telegram Bots', 'svc.s2d': 'Powerful Telegram bots and automation tools',
+    'svc.s3t': 'Business Automation', 'svc.s3d': 'Automating and optimizing business processes',
+    'svc.s4t': 'AI Media Production', 'svc.s4d': 'Creating videos, posters and marketing materials',
+    'svc.s5t': 'Web Development', 'svc.s5d': 'Premium websites and digital platforms',
+    'svc.s6t': 'API Integrations', 'svc.s6d': 'Integrating and managing various services',
+    'svc.s7t': 'Prompt Engineering', 'svc.s7d': 'Creating advanced prompts for AI models',
+    'svc.s8t': 'AI Video Generation', 'svc.s8d': 'Creating video content with AI',
+    'svc.s9t': 'AI Image Generation', 'svc.s9d': 'Professional images and visual content',
+    'svc.s10t': 'Workflow Automation', 'svc.s10d': 'Building and setting up complex workflow systems',
+    'svc.s11t': 'CRM Integrations', 'svc.s11d': 'CRM setup and customization',
+    'svc.s12t': 'Startup MVP Development', 'svc.s12d': 'Turning startup ideas into MVPs',
+    'skills.label': 'ARSENAL', 'skills.title': 'Technologies', 'skills.accent': 'Master',
+    'skills.subtitle': 'Frontend · Backend · AI & Automation',
+    'eco.label': 'ECOSYSTEM', 'eco.title': 'Digital Platforms',
+    'eco.subtitle': 'Available on all major social platforms.',
+    'eco.tgT': 'Telegram Channel', 'eco.tgD': 'Useful insights and tutorials',
+    'eco.igT': 'Instagram', 'eco.igD': 'AI content and media production',
+    'eco.liT': 'LinkedIn', 'eco.liD': 'Professional profile and business networking',
+    'eco.fbT': 'Facebook', 'eco.fbD': 'Official social page',
+    'eco.xT': 'X (Twitter)', 'eco.xD': 'AI and technology news',
+    'contact.label': 'CONTACT', 'contact.title': 'Get in Touch',
+    'contact.subtitle': 'Reach out for any questions or collaboration.',
+    'contact.sms': 'SMS', 'contact.phone': 'Phone', 'contact.tg': 'Telegram',
+    'contact.bot': 'Telegram Bot', 'contact.ig': 'Instagram',
+    'footer.c1': 'Aziz Asadov © 2026. All rights reserved.',
+    'footer.c2': 'Built with AI • Premium portfolio',
+    'dock.bot': 'Contact bot'
+  },
+  ru: {
+    'meta.title': 'Aziz Asadov | AI Builder & Digital Creator | Premium Portfolio',
+    'meta.description': 'Aziz Asadov — AI Builder, Digital Creator и основатель стартапов. Искусственный интеллект, Telegram-боты, автоматизация и premium цифровые продукты.',
+    'nav.home': 'Главная', 'nav.about': 'Обо мне', 'nav.experience': 'Опыт',
+    'nav.projects': 'Проекты', 'nav.skills': 'Навыки', 'nav.services': 'Услуги', 'nav.contact': 'Контакты',
+    'logo.subtitle': 'AI Builder • Digital Creator',
+    'loader.subtitle': 'Загрузка цифровой экосистемы...',
+    'loader.quote': 'Код. Идея. Интеллект. Результат.',
+    'loader.tagline': 'БЕЗГРАНИЧНЫЕ ВОЗМОЖНОСТИ С AI',
+    'loader.s1': 'AI SYSTEMS', 'loader.s2': 'DATABASE', 'loader.s3': 'API SERVICES',
+    'loader.s4': 'AUTOMATION', 'loader.s5': 'MEDIA ENGINE',
+    'hero.badge': 'AI Builder • Digital Creator • Team Leader',
+    'hero.desc': 'Я создаю реальные бизнес-решения, системы автоматизации и premium контент-экосистемы на базе искусственного интеллекта.<br><br>Превращаю простые идеи в работающие AI-продукты, Telegram-боты, системы автоматизации и цифровые платформы. Моя цель — создавать решения, которые экономят время, повышают эффективность и дают реальный результат.',
+    'hero.cta1': 'Смотреть проекты', 'hero.cta2': 'Связаться',
+    'hero.stat1': 'AI-проекты', 'hero.stat2': 'Контент', 'hero.stat3': 'Партнёры',
+    'hero.stat4': 'Сайты', 'hero.stat5': 'Инновации',
+    'hero.badge1': 'AI Strategist', 'hero.badge2': 'Team Leader', 'hero.badge3': 'Founder',
+    'about.label': 'BIO', 'about.title': 'Обо мне',
+    'about.subtitle': 'Я — Aziz Asadov. Работаю в сфере искусственного интеллекта, автоматизации и создания цифровых продуктов.',
+    'about.cardTitle': 'От идеи до готового продукта',
+    'about.card1': 'Сейчас работаю AI Team Leader в Izdihom PR/Marketing Agency. Участвовал в проектах AI-решений, Telegram-ботов, автоматизации и premium контента для различных компаний.',
+    'about.card2': 'Моя цель — создавать продукты, которые решают реальные проблемы, ускоряют бизнес и экономят время людей с помощью AI.',
+    'about.i1t': 'Должность', 'about.i1v': 'AI Team Leader', 'about.i1s': 'Izdihom PR/Marketing Agency',
+    'about.i2t': 'Направления', 'about.i2v': 'AI-системы', 'about.i2s': 'Telegram-боты • Automation',
+    'about.i3t': 'Специализация', 'about.i3v': 'Prompt Engineering', 'about.i3s': 'AI Media Production',
+    'about.i4t': 'Деятельность', 'about.i4v': 'Digital Ecosystem', 'about.i4s': 'Startup Development',
+    'ach.a1': 'AI-проекты', 'ach.a2': 'Созданный контент', 'ach.a3': 'Партнёры',
+    'ach.a4': 'Сайты и боты', 'ach.a5': 'Инновации',
+    'exp.label': 'ОПЫТ', 'exp.title': 'Профессиональный путь', 'exp.subtitle': 'Реальные проекты и практический опыт.',
+    'exp.e1l': '2025 - Наст. время', 'exp.e1t': 'AI Team Leader', 'exp.e1c': 'Izdihom PR/Marketing Agency',
+    'exp.e1d': 'Управление AI-отделом, разработка AI-стратегий и внедрение систем автоматизации',
+    'exp.e2l': 'AI Media Production', 'exp.e2t': 'Контент-экосистема',
+    'exp.e2d': 'Создание видеороликов, рекламных материалов, постеров и AI-контента для брендов',
+    'exp.e3l': 'Automation Systems', 'exp.e3t': 'Автоматизация бизнеса',
+    'exp.e3d': 'CRM-интеграции, AI-ассистенты, workflow-системы и обработка обращений',
+    'exp.e4l': 'Telegram Ecosystem', 'exp.e4t': 'Telegram-боты',
+    'exp.e4d': 'Telegram-боты, AI-ассистенты, автоответы и системы обращений',
+    'exp.e5l': 'Startup Development', 'exp.e5t': 'AI-продукты',
+    'exp.e5d': 'SaaS-платформы, цифровые экосистемы, MVP и стартап-проекты',
+    'proj.label': 'PORTFOLIO', 'proj.title': 'Мои проекты',
+    'proj.subtitle': 'Работающие AI-системы, платформы автоматизации и premium цифровые продукты.',
+    'proj.p0t': 'WEB STUDIO', 'proj.p0n': 'Premium Web Studio',
+    'proj.p0d': 'Система создания и развития современных, быстрых и SEO-оптимизированных сайтов для компаний, брендов и стартапов.',
+    'proj.p1t': 'AI ASSISTANT', 'proj.p1n': 'Echo AI Assistant',
+    'proj.p1d': 'Система, объединяющая маркетинг, перевод, контент, AI-чат и бизнес-ассистента.',
+    'proj.p2t': 'EDUCATION AI', 'proj.p2n': 'AI Teacher Bot',
+    'proj.p2d': 'Умный образовательный ассистент для учеников и студентов.',
+    'proj.p3t': 'BUILDIQ PRO', 'proj.p3n': 'BuildIQ Pro',
+    'proj.p3d': 'AI-система анализа для строительства и интерьера.',
+    'proj.p4t': 'AI CONTENT', 'proj.p4n': 'AI Content System',
+    'proj.p4d': 'Система premium контента и маркетинговых стратегий.',
+    'proj.p5t': 'E-COMMERCE AI', 'proj.p5n': 'AI Sales Assistant',
+    'proj.p5d': 'Рекомендации товаров, общение с клиентами и автоматизация продаж через Telegram.',
+    'proj.p6t': 'E-COMMERCE', 'proj.p6n': 'Smart Commerce Platform',
+    'proj.p6d': 'Современная платформа для управления товарами, заказами и роста продаж с AI.',
+    'proj.p7t': 'MEDIA', 'proj.p7n': 'AI News Hub',
+    'proj.p7d': 'Медиaplatforma для сбора, фильтрации и автопубликации AI-новостей.',
+    'proj.p8t': 'AUTOMATION', 'proj.p8n': 'Business Automation System',
+    'proj.p8d': 'Система автоматизации ежедневных процессов и управления задачами.',
+    'proj.p9t': 'ANALYTICS', 'proj.p9n': 'AI Business Dashboard',
+    'proj.p9d': 'Мониторинг и анализ продаж, клиентов и бизнес-показателей в реальном времени.',
+    'proj.p10t': 'MEDIA STUDIO', 'proj.p10n': 'AI Media Studio',
+    'proj.p10d': 'AI-создание видео, постеров, рекламы и контента для соцсетей.',
+    'proj.p11t': 'CRM', 'proj.p11n': 'AI Customer Hub',
+    'proj.p11d': 'AI-система централизованной обработки обращений из Telegram, сайта и соцсетей.',
+    'common.case': 'Case Study', 'common.live': 'Live',
+    'svc.label': 'УСЛУГИ', 'svc.title': 'Что мы предлагаем', 'svc.subtitle': 'Premium услуги и продукты.',
+    'svc.s1t': 'AI-системы', 'svc.s1d': 'Разработка custom AI-систем и intelligent решений',
+    'svc.s2t': 'Telegram-боты', 'svc.s2d': 'Мощные Telegram-боты и инструменты автоматизации',
+    'svc.s3t': 'Автоматизация бизнеса', 'svc.s3d': 'Автоматизация и оптимизация бизнес-процессов',
+    'svc.s4t': 'AI Media Production', 'svc.s4d': 'Создание видео, постеров и маркетинговых материалов',
+    'svc.s5t': 'Web Development', 'svc.s5d': 'Premium сайты и цифровые платформы',
+    'svc.s6t': 'API-интеграции', 'svc.s6d': 'Интеграция и управление различными сервисами',
+    'svc.s7t': 'Prompt Engineering', 'svc.s7d': 'Создание продвинутых промптов для AI-моделей',
+    'svc.s8t': 'AI Video Generation', 'svc.s8d': 'Создание видеоконтента с помощью AI',
+    'svc.s9t': 'AI Image Generation', 'svc.s9d': 'Профессиональные изображения и визуальный контент',
+    'svc.s10t': 'Workflow Automation', 'svc.s10d': 'Создание и настройка сложных workflow-систем',
+    'svc.s11t': 'CRM-интеграции', 'svc.s11d': 'Настройка и кастомизация CRM-систем',
+    'svc.s12t': 'Startup MVP Development', 'svc.s12d': 'Превращение стартап-идей в MVP',
+    'skills.label': 'ARSENAL', 'skills.title': 'Технологии', 'skills.accent': 'Мастер',
+    'skills.subtitle': 'Frontend · Backend · AI & Automation',
+    'eco.label': 'ECOSYSTEM', 'eco.title': 'Цифровые платформы',
+    'eco.subtitle': 'Присутствую на всех ключевых социальных платформах.',
+    'eco.tgT': 'Telegram-канал', 'eco.tgD': 'Полезные материалы и уроки',
+    'eco.igT': 'Instagram', 'eco.igD': 'AI-контент и медиапроизводство',
+    'eco.liT': 'LinkedIn', 'eco.liD': 'Профессиональный профиль и деловые связи',
+    'eco.fbT': 'Facebook', 'eco.fbD': 'Официальная страница',
+    'eco.xT': 'X (Twitter)', 'eco.xD': 'Новости AI и технологий',
+    'contact.label': 'КОНТАКТЫ', 'contact.title': 'Связаться',
+    'contact.subtitle': 'Свяжитесь со мной по любым вопросам.',
+    'contact.sms': 'SMS', 'contact.phone': 'Телефон', 'contact.tg': 'Telegram',
+    'contact.bot': 'Telegram Bot', 'contact.ig': 'Instagram',
+    'footer.c1': 'Aziz Asadov © 2026. Все права защищены.',
+    'footer.c2': 'Создано с AI • Premium portfolio',
+    'dock.bot': 'Бот для связи'
   }
 };
 
+function t(key, lang) {
+  return translations[lang]?.[key] ?? translations.uz[key] ?? '';
+}
+
 function setLanguage(lang) {
+  if (!translations[lang]) lang = 'uz';
+
   localStorage.setItem('language', lang);
-  document.querySelectorAll('[data-text-key]').forEach(el => {
-    const key = el.getAttribute('data-text-key');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = t(key, lang);
+    if (!value) return;
+
+    if (el.hasAttribute('data-i18n-html')) {
+      el.innerHTML = value;
+    } else {
+      el.textContent = value;
     }
+  });
+
+  document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+    const key = el.getAttribute('data-i18n-tooltip');
+    const value = t(key, lang);
+    if (value) el.setAttribute('data-tooltip', value);
+  });
+
+  const title = t('meta.title', lang);
+  const desc = t('meta.description', lang);
+  if (title) document.title = title;
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && desc) metaDesc.setAttribute('content', desc);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const lang = btn.getAttribute('data-lang');
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    setLanguage(lang);
+    setLanguage(btn.dataset.lang);
+
+    const navbar = document.querySelector('.navbar');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    if (navbar?.classList.contains('mobile-active')) {
+      navbar.classList.remove('mobile-active');
+      menuBtn?.querySelectorAll('span').forEach(span => {
+        span.style.transform = 'none';
+        span.style.opacity = '1';
+      });
+    }
   });
 });
 
 const savedLang = localStorage.getItem('language') || 'uz';
 setLanguage(savedLang);
-document.querySelector(`[data-lang="${savedLang}"]`)?.classList.add('active');

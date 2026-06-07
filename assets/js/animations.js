@@ -26,9 +26,9 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.querySelectorAll(
-  '.project-card, .service-card, .tech-item, '
+  '.project-card, .service-card, .tech-pill, '
   + '.social-card, .achievement-card, .timeline-item, '
-  + '.info-card'
+  + '.info-card, .contact-card'
 ).forEach(el => {
   observer.observe(el);
 });
